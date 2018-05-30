@@ -4,15 +4,15 @@ class Author
   
   def initialize(name)
     @name = name
-    @songs = []
+    @posts = []
   end
   
-  def add_song(song)
-    @songs << song
-    song.artist = self
+  def add_post(post)
+    @posts << post
+    post.author = self
   end
   
-  def add_song_by_name(name)
+  def add_post_by_title(name)
     song = Song.new(name)
     @songs << song
     song.artist = self
